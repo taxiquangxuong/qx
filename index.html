@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Taxi Quảng Xương - Taxi Điện VF5 24/7</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+:root{
+    --primary:#ffb100;
+    --secondary:#0b3d91;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    color:#333;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:999;
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:var(--secondary);
+}
+
+.logo i{
+    color:var(--primary);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* BANNER */
+
+.banner{
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+   url("images/1.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.banner h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.banner p{
+    font-size:1.3rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 40px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    box-shadow:0 5px 20px rgba(255,177,0,.5);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.hotline{
+    margin-top:20px;
+    display:inline-block;
+    background:#ff3b30;
+    padding:12px 25px;
+    border-radius:50px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* SECTION */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    color:var(--secondary);
+    font-size:2.5rem;
+}
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    padding:35px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
+.service-card i{
+    font-size:45px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+/* GALLERY */
+
+.fleet{
+    background:#f5f7fa;
+}
+
+.fleet-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.car-card{
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.car-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.car-card:hover img{
+    transform:scale(1.1);
+}
+
+/* REVIEW */
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.review{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+/* CONTACT */
+
+.contact{
+    background:linear-gradient(135deg,var(--secondary),#195dc4);
+    color:white;
+}
+
+.contact-box{
+    text-align:center;
+}
+
+.contact-box h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.contact-box p{
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:40px 0;
+}
+
+/* FLOATING */
+
+.floating-bar{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    z-index:9999;
+}
+
+.floating-bar a{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.floating-bar a:hover{
+    transform:scale(1.1);
+}
+
+.phone{
+    background:#ff3b30;
+    color:white;
+    font-size:28px;
+}
+
+.facebook{
+    background:#1877f2;
+    color:white;
+    font-size:28px;
+}
+
+.zalo{
+    background:white;
+}
+
+.zalo img{
+    width:38px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.banner h1{
+    font-size:2.5rem;
+}
+
+nav{
+    display:none;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<div class="logo">
+<i class="fas fa-taxi"></i>
+Taxi Quảng Xương
+</div>
+
+<nav>
+<ul>
+<li><a href="#">Trang Chủ</a></li>
+<li><a href="#services">Dịch Vụ</a></li>
+<li><a href="#fleet">Đội Xe</a></li>
+<li><a href="#contact">Liên Hệ</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+<section class="banner">
+
+<div class="container">
+
+<h1>TAXI QUẢNG XƯƠNG</h1>
+
+<p>
+Taxi Điện VinFast VF5<br>
+Đưa đón sân bay • Du lịch • Nội thành 24/7
+</p>
+
+<a href="tel:0974143136" class="btn">
+GỌI NGAY
+</a>
+
+<br><br>
+
+<div class="hotline">
+☎ 0974 143 136
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="container">
+
+<h2 class="section-title">
+Dịch Vụ Của Chúng Tôi
+</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+<i class="fas fa-plane-departure"></i>
+<h3>Đưa Đón Sân Bay</h3>
+<p>Nhanh chóng, đúng giờ, giá hợp lý.</p>
+</div>
+
+<div class="service-card">
+<i class="fas fa-umbrella-beach"></i>
+<h3>Du Lịch Sầm Sơn</h3>
+<p>Xe sạch đẹp, lái xe thân thiện.</p>
+</div>
+
+<div class="service-card">
+<i class="fas fa-mobile-screen-button"></i>
+<h3>Đặt Xe Nhanh</h3>
+<p>Đặt xe qua điện thoại hoặc Zalo.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="fleet" class="fleet">
+
+<div class="container">
+
+<h2 class="section-title">
+Đội Xe Taxi Điện VF5
+</h2>
+
+<div class="fleet-grid">
+
+<div class="car-card"><img src="images/1.jpg" alt="Taxi Quảng Xương"></div>
+<div class="car-card"><img src="images/2.jpg" alt="Taxi Quảng Xương"></div>
+<div class="car-card"><img src="images/3.jpg" alt="Taxi Quảng Xương"></div>
+<div class="car-card"><img src="images/4.jpg" alt="Taxi Quảng Xương"></div>
+<div class="car-card"><img src="images/5.jpg" alt="Taxi Quảng Xương"></div>
+<div class="car-card"><img src="images/6.jpg" alt="Taxi Quảng Xương"></div>
+<div class="car-card"><img src="images/7.jpg" alt="Taxi Quảng Xương"></div>
+<div class="car-card"><img src="images/8.jpg" alt="Taxi Quảng Xương"></div>
+<div class="car-card"><img src="images/9.jpg" alt="Taxi Quảng Xương"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Khách Hàng Đánh Giá
+</h2>
+
+<div class="review-grid">
+
+<div class="review">
+⭐⭐⭐⭐⭐<br><br>
+Xe sạch sẽ, giá hợp lý, tài xế nhiệt tình.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐<br><br>
+Đặt xe qua Zalo rất nhanh và tiện lợi.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐<br><br>
+Đi sân bay đúng giờ, rất chuyên nghiệp.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<div class="container contact-box">
+
+<h2>Liên Hệ Đặt Xe</h2>
+
+<p><strong>Hotline:</strong> 0974 143 136</p>
+
+<p><strong>Zalo:</strong> 0974 143 136</p>
+
+<p><strong>Facebook:</strong> Taxi Quảng Xương</p>
+
+<a href="tel:0974143136" class="btn">
+Gọi Đặt Xe Ngay
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Taxi Quảng Xương</p>
+<p>Taxi Điện VinFast VF5 - Phục vụ 24/7</p>
+
+</footer>
+
+<div class="floating-bar">
+
+<a href="tel:0974143136" class="phone">
+<i class="fas fa-phone"></i>
+</a>
+
+<a href="https://zalo.me/0974143136" target="_blank" class="zalo">
+<img src="images/zalo.png" alt="Zalo">
+</a>
+
+<a href="https://www.facebook.com/share/1D1U25yVmU/?mibextid=wwXIfr" target="_blank" class="facebook">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+</div>
+
+</body>
+</html>

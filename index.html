@@ -629,6 +629,21 @@ h2{
     box-shadow:0 12px 24px rgba(233,40,40,.22);
 }
 
+.booking-actions{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:12px;
+}
+
+.booking-form .zalo-submit{
+    background:#0068ff;
+    box-shadow:0 12px 24px rgba(0,104,255,.22);
+}
+
+.booking-form .email-submit{
+    background:var(--red);
+}
+
 .contact{
     padding:0;
     background:var(--blue-dark);
@@ -834,6 +849,10 @@ footer{
     .booking-form{
         grid-template-columns:1fr;
         padding:20px;
+    }
+
+    .booking-actions{
+        grid-template-columns:1fr;
     }
 
     .input-action{
@@ -1100,7 +1119,10 @@ footer{
                     <label for="note">Ghi chú</label>
                     <textarea id="note" name="note" placeholder="Ví dụ: số người, hành lý, chuyến bay, cần ghế trẻ em..."></textarea>
                 </div>
-                <button class="field-full" type="submit"><i class="fa-solid fa-paper-plane"></i> Gửi thông tin đặt xe</button>
+                <div class="booking-actions field-full">
+                    <button class="zalo-submit" type="button" id="sendZaloBtn"><i class="fa-solid fa-comment-dots"></i> Gửi qua Zalo</button>
+                    <button class="email-submit" type="submit"><i class="fa-solid fa-envelope"></i> Gửi qua Email</button>
+                </div>
             </form>
         </div>
     </section>
@@ -1174,9 +1196,12 @@ footer{
 </div>
 <script>
 const BOOKING_EMAIL = "taxithanhhoa36@gmail.com";
+const ZALO_PHONE = "0974143136";
 const locationButton = document.getElementById("getLocationBtn");
 const locationStatus = document.getElementById("locationStatus");
 const pickupInput = document.getElementById("pickup");
+const bookingForm = document.getElementById("bookingForm");
+const zaloButton = document.getElementById("sendZaloBtn");
 
 locationButton.addEventListener("click", function(){
     if (!navigator.geolocation) {
@@ -1212,13 +1237,9 @@ locationButton.addEventListener("click", function(){
     });
 });
 
-document.getElementById("bookingForm").addEventListener("submit", function(event){
-    event.preventDefault();
-
-    const form = event.currentTarget;
+function getBookingMessage(form){
     const data = new FormData(form);
-    const subject = "Đơn đặt xe Taxi Thanh Hóa 36";
-    const body = [
+    return [
         "Thông tin đặt xe:",
         "",
         "Họ tên: " + data.get("customerName"),
@@ -1229,6 +1250,43 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
         "Loại xe: " + data.get("carType"),
         "Ghi chú: " + (data.get("note") || "Không có")
     ].join("\n");
+}
+
+async function copyBookingMessage(message){
+    if (!navigator.clipboard) {
+        return false;
+    }
+
+    try {
+        await navigator.clipboard.writeText(message);
+        return true;
+    } catch (error) {
+        return false;
+    }
+}
+
+zaloButton.addEventListener("click", async function(){
+    if (!bookingForm.reportValidity()) {
+        return;
+    }
+
+    const message = getBookingMessage(bookingForm);
+    const copied = await copyBookingMessage(message);
+
+    if (copied) {
+        alert("Đã copy thông tin đặt xe. Zalo sẽ mở ra, bạn chỉ cần dán và gửi cho tài xế.");
+    } else {
+        alert("Zalo sẽ mở ra. Nếu nội dung chưa tự hiện, vui lòng copy thông tin trong form để gửi cho tài xế.");
+    }
+
+    window.open("https://zalo.me/" + ZALO_PHONE, "_blank", "noopener");
+});
+
+bookingForm.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    const subject = "Đơn đặt xe Taxi Quảng XươngThanh Hóa ";
+    const body = getBookingMessage(event.currentTarget);
 
     window.location.href = "mailto:" + BOOKING_EMAIL
         + "?subject=" + encodeURIComponent(subject)

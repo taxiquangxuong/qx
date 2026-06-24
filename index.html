@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taxi Quảng Xương Thanh Hóa  | Taxi 4-7 chỗ 24/7 | 0974 143 136</title>
-<meta name="description" content="Taxi Thanh Hóa  phục vụ 24/7 bằng nhiều dòng xe 4-7 chỗ sạch đẹp. Đưa đón sân bay Thọ Xuân, Sầm Sơn, Quảng Xương, nội thành Thanh Hóa. Hotline 0974 143 136.">
-<meta name="keywords" content="taxi thanh hoa 36, taxi thanh hóa, taxi quảng xương, taxi sân bay thọ xuân, taxi sầm sơn">
+<title>Taxi Quảng Xương Thanh Hóa | Taxi 4-7 chỗ 24/7 | 0974 143 136</title>
+<meta name="description" content="Taxi Quảng Xương Thanh Hóa phục vụ 24/7 bằng nhiều dòng xe 4-7 chỗ sạch đẹp. Đưa đón sân bay Thọ Xuân, Sầm Sơn, Quảng Xương, nội thành Thanh Hóa. Hotline 0974 143 136.">
+<meta name="keywords" content="taxi quảng xương thanh hóa, taxi quảng xương, taxi thanh hóa, taxi sân bay thọ xuân, taxi sầm sơn">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="Taxi Quảng Xương Thanh Hóa ">
+<meta property="og:title" content="Taxi Quảng Xương Thanh Hóa">
 <meta property="og:description" content="Taxi 4-7 chỗ phục vụ 24/7 tại Thanh Hóa. Gọi 0974 143 136.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="images/limoa.jpg">
@@ -176,6 +176,7 @@ nav a:hover{
     font-weight:800;
     text-decoration:none;
     box-shadow:0 12px 24px rgba(233,40,40,.24);
+    animation:callAttention 1.8s ease-in-out infinite;
 }
 
 .hero{
@@ -258,6 +259,10 @@ h1{
     background:var(--yellow);
     color:var(--blue-dark);
     box-shadow:0 16px 28px rgba(255,196,0,.32);
+}
+
+.call-cta{
+    animation:callAttention 1.8s ease-in-out infinite;
 }
 
 .btn-booking{
@@ -544,13 +549,13 @@ h2{
 
 .booking-form{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
     gap:16px;
-    padding:26px;
+    padding:28px;
     border:1px solid var(--line);
     border-radius:8px;
     background:var(--white);
-    box-shadow:0 16px 34px rgba(23,32,51,.07);
+    box-shadow:0 22px 44px rgba(23,32,51,.12);
 }
 
 .field{
@@ -631,17 +636,28 @@ h2{
 
 .booking-actions{
     display:grid;
-    grid-template-columns:1.1fr .9fr;
+    grid-template-columns:1fr;
     gap:12px;
 }
 
 .booking-form .zalo-submit{
     background:#0068ff;
-    box-shadow:0 12px 24px rgba(0,104,255,.22);
+    min-height:58px;
+    font-size:18px;
+    box-shadow:0 14px 28px rgba(0,104,255,.28);
 }
 
 .booking-form .email-submit{
+    min-height:46px;
     background:var(--red);
+    font-size:15px;
+    opacity:.92;
+}
+
+.booking-hint{
+    color:var(--muted);
+    font-size:13px;
+    text-align:center;
 }
 
 .contact{
@@ -768,6 +784,17 @@ footer{
     50%{transform:scale(1.08)}
 }
 
+@keyframes callAttention{
+    0%,100%{
+        transform:scale(1);
+        box-shadow:0 12px 24px rgba(233,40,40,.22);
+    }
+    50%{
+        transform:scale(1.04);
+        box-shadow:0 16px 34px rgba(233,40,40,.42);
+    }
+}
+
 @keyframes bookingGlow{
     0%,100%{transform:translateY(0); box-shadow:0 18px 34px rgba(255,196,0,.34)}
     50%{transform:translateY(-2px); box-shadow:0 22px 42px rgba(255,196,0,.52)}
@@ -883,7 +910,7 @@ footer{
 {
     "@context":"https://schema.org",
     "@type":"TaxiService",
-    "name":"Taxi Quảng Xương Thanh Hóa ",
+    "name":"Taxi Quảng Xương Thanh Hóa",
     "telephone":"+84974143136",
     "areaServed":"Thanh Hóa",
     "url":"https://taxiquangx.io.vn/"
@@ -901,10 +928,10 @@ footer{
 
 <header>
     <div class="container nav">
-        <a class="brand" href="#top" aria-label="Taxi Quảng Xương Thanh Hóa ">
+        <a class="brand" href="#top" aria-label="Taxi Quảng Xương Thanh Hóa">
             <span class="brand-icon"><i class="fa-solid fa-taxi"></i></span>
             <span>
-                <strong>Taxi Quảng Xương Thanh Hóa </strong>
+                <strong>Taxi Quảng Xương Thanh Hóa</strong>
                 <small>Taxi 4-7 chỗ 24/7</small>
             </span>
         </a>
@@ -922,15 +949,15 @@ footer{
 </header>
 
 <main id="top">
-    <section class="hero" aria-label="Đặt taxi Thanh Hóa">
+    <section class="hero" aria-label="Đặt Taxi Quảng Xương Thanh Hóa">
         <div class="container">
             <div class="hero-content">
                 <div class="eyebrow"><i class="fa-solid fa-car-side"></i> Nhiều dòng xe sạch, êm, giá rõ ràng</div>
-                <h1>Taxi Thanh Hóa 36</h1>
+                <h1>Taxi Quảng Xương Thanh Hóa</h1>
                 <p>Đưa đón sân bay Thọ Xuân, Sầm Sơn, Quảng Xương và nội thành Thanh Hóa 24/7 bằng các dòng xe taxi sạch đẹp như trong ảnh.</p>
 
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="tel:0974143136"><i class="fa-solid fa-phone-volume"></i> 0974 143 136</a>
+                    <a class="btn btn-primary call-cta" href="tel:0974143136"><i class="fa-solid fa-phone-volume"></i> 0974 143 136</a>
                     <a class="btn btn-booking" href="#booking"><i class="fa-solid fa-calendar-check"></i> <span>Đặt xe ngay</span></a>
                 </div>
 
@@ -1037,9 +1064,9 @@ footer{
             </div>
 
             <div class="fleet-grid">
-                <figure class="car-photo"><img src="images/limoa.jpg" alt="Xe Taxi Thanh Hóa 36"></figure>
+                <figure class="car-photo"><img src="images/limoa.jpg" alt="Xe Taxi Quảng Xương Thanh Hóa"></figure>
                 <figure class="car-photo"><img src="images/limob.jpg" alt="Xe taxi 7 chỗ Thanh Hóa"></figure>
-                <figure class="car-photo"><img src="images/limoc.jpg" alt="Đội xe Taxi Thanh Hóa 36"></figure>
+                <figure class="car-photo"><img src="images/limoc.jpg" alt="Đội xe Taxi Quảng Xương Thanh Hóa"></figure>
                 <figure class="car-photo"><img src="images/limod.jpg" alt="Taxi Quảng Xương Thanh Hóa"></figure>
                 <figure class="car-photo"><img src="images/vf6a.png" alt="Taxi 4 chỗ phục vụ 24/7"></figure>
                 <figure class="car-photo"><img src="images/vf7a.jpg" alt="Dòng xe taxi đặt xe Thanh Hóa"></figure>
@@ -1078,15 +1105,11 @@ footer{
             <div class="booking-copy">
                 <div class="section-kicker">Đặt xe qua email</div>
                 <h2>Gửi thông tin chuyến đi</h2>
-                <p>Nhập điểm đón, điểm đến và thời gian cần xe. Nội dung đặt xe sẽ được soạn thành email để gửi cho Taxi Quảng Xương.</p>
+                <p>Nhập số điện thoại, điểm đón, điểm đến và thời gian cần xe. Bấm Zalo để copy toàn bộ nội dung, gồm cả link vị trí, rồi gửi ngay cho tài xế.</p>
                 <a href="tel:0974143136"><i class="fa-solid fa-phone-volume"></i> 0974 143 136</a>
             </div>
 
             <form class="booking-form" id="bookingForm">
-                <div class="field">
-                    <label for="customerName">Họ tên</label>
-                    <input id="customerName" name="customerName" type="text" autocomplete="name" required>
-                </div>
                 <div class="field">
                     <label for="customerPhone">Số điện thoại</label>
                     <input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" required>
@@ -1107,22 +1130,15 @@ footer{
                     <label for="pickupTime">Thời gian đón</label>
                     <input id="pickupTime" name="pickupTime" type="datetime-local" required>
                 </div>
-                <div class="field">
-                    <label for="carType">Loại xe</label>
-                    <select id="carType" name="carType">
-                        <option>Xe 4 chỗ</option>
-                        <option>Xe 7 chỗ</option>
-                        <option>Tư vấn xe phù hợp</option>
-                    </select>
-                </div>
                 <div class="field field-full">
                     <label for="note">Ghi chú</label>
-                    <textarea id="note" name="note" placeholder="Ví dụ: số người, hành lý, chuyến bay, cần ghế trẻ em..."></textarea>
+                    <textarea id="note" name="note" placeholder="Ví dụ: số người, hành lý, chuyến bay, loại xe cần đặt..."></textarea>
                 </div>
                 <div class="booking-actions field-full">
-                    <button class="zalo-submit" type="button" id="sendZaloBtn"><i class="fa-solid fa-comment-dots"></i> Gửi qua Zalo</button>
+                    <button class="zalo-submit" type="button" id="sendZaloBtn"><i class="fa-solid fa-comment-dots"></i> Đặt xe qua Zalo</button>
                     <button class="email-submit" type="submit"><i class="fa-solid fa-envelope"></i> Gửi qua Email</button>
                 </div>
+                <p class="booking-hint field-full">Bấm Zalo sẽ copy toàn bộ nội dung đặt xe và mở chat với tài xế.</p>
             </form>
         </div>
     </section>
@@ -1131,10 +1147,10 @@ footer{
         <div class="container contact-inner">
             <div>
                 <div class="section-kicker">Liên hệ</div>
-                <h2>Đặt Taxi Thanh Hóa 36 ngay</h2>
+                <h2>Đặt Taxi Quảng Xương Thanh Hóa ngay</h2>
                 <p>Gọi điện là cách nhanh nhất để có xe. Bạn cũng có thể nhắn Zalo số 0974 143 136 để gửi vị trí đón và lịch trình.</p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="tel:0974143136"><i class="fa-solid fa-phone"></i> Gọi đặt xe</a>
+                    <a class="btn btn-primary call-cta" href="tel:0974143136"><i class="fa-solid fa-phone"></i> Gọi đặt xe</a>
                     <a class="btn btn-outline" href="https://zalo.me/0974143136" target="_blank" rel="noopener"><i class="fa-solid fa-comment"></i> Nhắn Zalo</a>
                 </div>
             </div>
@@ -1158,7 +1174,7 @@ footer{
                     <i class="fa-brands fa-facebook-f"></i>
                     <div>
                         <strong>Facebook</strong>
-                        <a href="https://www.facebook.com/share/1D1U25yVmU/?mibextid=wwXIfr" target="_blank" rel="noopener">Taxi Thanh Hóa 36</a>
+                        <a href="https://www.facebook.com/share/1D1U25yVmU/?mibextid=wwXIfr" target="_blank" rel="noopener">Taxi Quảng Xương Thanh Hóa</a>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -1175,22 +1191,22 @@ footer{
 
 <footer>
     <div class="container">
-        <p>© 2026 Taxi Quảng Xương Thanh Hóa  . Taxi 4-7 chỗ phục vụ 24/7.</p>
+        <p>© 2026 Taxi Quảng Xương Thanh Hóa - Taxi 4-7 chỗ phục vụ 24/7 - Thiết Kế WebSite Xin Liên Hệ - 0986 543 723 - Mai Băng Cường</p>
     </div>
 </footer>
 
 <div class="floating-bar" aria-label="Liên hệ nhanh">
-    <a class="book-now" href="#booking" aria-label="Đặt xe Taxi Thanh Hóa 36">
+    <a class="book-now" href="#booking" aria-label="Đặt xe Taxi Quảng Xương Thanh Hóa">
         <i class="fa-solid fa-calendar-check"></i>
         <span>Đặt xe</span>
     </a>
-    <a class="phone" href="tel:0974143136" aria-label="Taxi Quảng Xương Thanh Hóa ">
+    <a class="phone" href="tel:0974143136" aria-label="Taxi Quảng Xương Thanh Hóa">
         <i class="fa-solid fa-phone"></i>
     </a>
-    <a class="zalo" href="https://zalo.me/0974143136" target="_blank" rel="noopener" aria-label="Nhắn Zalo Taxi Thanh Hóa 36">
+    <a class="zalo" href="https://zalo.me/0974143136" target="_blank" rel="noopener" aria-label="Nhắn Zalo Taxi Quảng Xương Thanh Hóa">
         <img src="images/zalo.png" alt="Zalo">
     </a>
-    <a class="facebook" href="https://www.facebook.com/share/1D1U25yVmU/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook Taxi Thanh Hóa 36">
+    <a class="facebook" href="https://www.facebook.com/share/1D1U25yVmU/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook Taxi Quảng Xương Thanh Hóa">
         <i class="fa-brands fa-facebook-f"></i>
     </a>
 </div>
@@ -1242,27 +1258,35 @@ function getBookingMessage(form){
     return [
         "Thông tin đặt xe:",
         "",
-        "Họ tên: " + data.get("customerName"),
         "Số điện thoại: " + data.get("customerPhone"),
         "Điểm đón: " + data.get("pickup"),
         "Điểm đến: " + data.get("dropoff"),
         "Thời gian đón: " + data.get("pickupTime"),
-        "Loại xe: " + data.get("carType"),
         "Ghi chú: " + (data.get("note") || "Không có")
     ].join("\n");
 }
 
 async function copyBookingMessage(message){
-    if (!navigator.clipboard) {
-        return false;
+    try {
+        if (navigator.clipboard) {
+            await navigator.clipboard.writeText(message);
+            return true;
+        }
+    } catch (error) {
+        // Use the fallback below.
     }
 
-    try {
-        await navigator.clipboard.writeText(message);
-        return true;
-    } catch (error) {
-        return false;
-    }
+    const textarea = document.createElement("textarea");
+    textarea.value = message;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    const copied = document.execCommand("copy");
+    document.body.removeChild(textarea);
+    return copied;
 }
 
 zaloButton.addEventListener("click", async function(){
@@ -1274,9 +1298,9 @@ zaloButton.addEventListener("click", async function(){
     const copied = await copyBookingMessage(message);
 
     if (copied) {
-        alert("Đã copy thông tin đặt xe. Zalo sẽ mở ra, bạn chỉ cần dán và gửi cho tài xế.");
+        alert("Đã copy toàn bộ thông tin đặt xe, gồm cả vị trí nếu đã lấy. Zalo sẽ mở ra, bạn chỉ cần dán và gửi cho tài xế.");
     } else {
-        alert("Zalo sẽ mở ra. Nếu nội dung chưa tự hiện, vui lòng copy thông tin trong form để gửi cho tài xế.");
+        alert("Zalo sẽ mở ra. Nếu chưa dán được tự động, vui lòng copy thông tin trong form để gửi cho tài xế.");
     }
 
     window.open("https://zalo.me/" + ZALO_PHONE, "_blank", "noopener");
@@ -1285,7 +1309,7 @@ zaloButton.addEventListener("click", async function(){
 bookingForm.addEventListener("submit", function(event){
     event.preventDefault();
 
-    const subject = "Đơn đặt xe Taxi Quảng XươngThanh Hóa ";
+    const subject = "Đơn đặt xe Taxi Quảng Xương Thanh Hóa";
     const body = getBookingMessage(event.currentTarget);
 
     window.location.href = "mailto:" + BOOKING_EMAIL
